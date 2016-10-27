@@ -34,6 +34,6 @@ fi
 
 
 (cd $1 && zip -vr ../wp.springnet_$1.zip * -x "*.git*" -x "springnet/.git" -x "springnet/.settings/*" -x "springnet/.buildpath" -x "springnet/.gitignore" -x "springnet/.project" -x "springnet/netlib/.settings*" -x "springnet/netlib/composer.lock" -x "springnet/netlib/.buildpath" -x "springnet/netlib/.project")
-openssl sha1 wp.springnet_$1.zip
-openssl sha256 wp.springnet_$1.zip
-
+echo
+echo "Release JSON"
+(./pkginfo.sh $1)
